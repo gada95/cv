@@ -31,7 +31,7 @@ function Contacto() {
     e.preventDefault();
     if (validarFormulario()) {
       try {
-        const response = await fetch("http://localhost:5000/send-email", {
+        const response = await fetch("http://cv-r3h1.vercel.app", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
