@@ -27,13 +27,31 @@ function Contacto() {
   };
 
   // Función para manejar el envío del formulario
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validarFormulario()) {
-      alert("Formulario enviado correctamente.");
-      setFormData({ nombre: "", email: "", mensaje: "" }); // Resetea los campos
+      try {
+        const response = await fetch("http://localhost:5000/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+  
+        if (response.ok) {
+          alert("Correo enviado correctamente.");
+          setFormData({ nombre: "", email: "", mensaje: "" });
+        } else {
+          alert("Error al enviar el correo.");
+        }
+      } catch (error) {
+        console.error("Error al enviar correo:", error);
+        alert("Hubo un problema al enviar el correo.");
+      }
     }
   };
+  
 
   return (
     <section style={{ padding: "20px", textAlign: "center" }}>
