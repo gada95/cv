@@ -31,7 +31,7 @@ function Contacto() {
     e.preventDefault();
     if (validarFormulario()) {
       try {
-        const response = await fetch("http://cv-r3h1.vercel.app", {
+        const response = await fetch("https://cv-r3h1-7ynhb851c-gastons-projects-45174d15.vercel.app/", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
