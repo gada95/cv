@@ -61,7 +61,7 @@ function App() {
         <Skills />
       </div>
       <div id="contacto" data-aos="fade-left">
-        <Contactoo />
+        <Contacto />
       </div>
       <div id="footer_" data-aos="fade-left">
         <Footer_ />
