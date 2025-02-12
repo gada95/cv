@@ -60,7 +60,7 @@ function App() {
       <div id="habilidades" data-aos="fade-up">
         <Skills />
       </div>
-      <div id="contacto" data-aos="fade-left">
+      <div id="contactoo" data-aos="fade-left">
         <Contacto />
       </div>
       <div id="footer_" data-aos="fade-left">
