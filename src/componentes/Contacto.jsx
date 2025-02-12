@@ -52,7 +52,7 @@ function Contacto() {
 
   return (
     <section style={{ padding: "20px", textAlign: "center" }}>
-      <h2 className="experiencia-titulo">Contactoo</h2>
+      <h2 className="experiencia-titulo">Contacto</h2>
       <form
         onSubmit={handleSubmit}
         style={{
