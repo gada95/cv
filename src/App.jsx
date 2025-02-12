@@ -45,7 +45,7 @@ function App() {
         <a href="#header" style={{ margin: "0 15px", color: "#2ecc71", textDecoration: "none" }}>Inicio</a>
         <a href="#experiencia" style={{ margin: "0 15px", color: "#2ecc71", textDecoration: "none" }}>Experiencia</a>
         <a href="#habilidades" style={{ margin: "0 15px", color: "#2ecc71", textDecoration: "none" }}>Habilidades</a>
-        <a href="#contacto" style={{ margin: "0 15px", color: "#2ecc71", textDecoration: "none" }}>Contactoo</a>
+        <a href="#contacto" style={{ margin: "0 15px", color: "#2ecc71", textDecoration: "none" }}>Contacto</a>
         <a href="#footer_" style={{ margin: "0 15px", color: "#2ecc71", textDecoration: "none" }}>Footer</a>
 
       </nav>
