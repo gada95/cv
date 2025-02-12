@@ -6,7 +6,7 @@ function Header() {
   const [text, setText] = useState('');
 
   // Texto completo que queremos mostrar
-  const fullText = '. A pasionado por crear interfaces modernas y funcionales.';
+  const fullText = '* Transformando ideas en experiencias interactivas';
 
   // Velocidad de escritura (en milisegundos)
   const typingSpeed = 90;
