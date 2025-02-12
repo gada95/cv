@@ -6,10 +6,10 @@ function Header() {
   const [text, setText] = useState('');
 
   // Texto completo que queremos mostrar
-  const fullText = 'Apasionado por crear interfaces modernas y funcionales.';
+  const fullText = '. A pasionado por crear interfaces modernas y funcionales.';
 
   // Velocidad de escritura (en milisegundos)
-  const typingSpeed = 100;
+  const typingSpeed = 90;
 
   // useEffect para el efecto de escritura
   useEffect(() => {

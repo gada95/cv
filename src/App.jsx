@@ -7,11 +7,15 @@ import Skills from './componentes/Skills';
 import Contacto from './componentes/Contacto';
 import Footer_ from './componentes/Footer_';
 
-
 function App() {
   const [darkMode, setDarkMode] = useState(true);
 
   const toggleTheme = () => {
+    if (darkMode) {
+      document.body.style.backgroundColor = "#ffffff"; // Fondo blanco en modo claro
+    } else {
+      document.body.style.backgroundColor = "#1f1f1f"; // Fondo oscuro
+    }
     setDarkMode(!darkMode);
   };
 
@@ -20,25 +24,26 @@ function App() {
   }, []);
 
   return (
-    <div style={{ backgroundColor: darkMode ? "#121212" : "#ffffff", color: darkMode ? "#ffffff" : "#000000" }}>
+    <div style={{ backgroundColor: darkMode ? "#121212" : "#ffffff" }}>
       {/* Botón para alternar entre temas */}
-      <button
-        onClick={toggleTheme}
-        style={{
-          position: "fixed",
-          top: "10px",
-          right: "10px",
-          padding: "10px 20px",
-          backgroundColor: darkMode ? "#2ecc71" : "#333",
-          color: "#fff",
-          border: "none",
-          borderRadius: "5px",
-          cursor: "pointer",
-          zIndex: 1000,
-        }}
-      >
-        {darkMode ? "Modo Claro" : "Modo Oscuro"}
-      </button>
+     {/*} <button
+  onClick={toggleTheme}
+  style={{
+    position: "fixed", // Fijarlo en la pantalla
+    top: "10px", // Posicionarlo en la parte superior
+    right: "10px", // Pegarlo a la derecha
+    padding: "10px 20px",
+    backgroundColor: darkMode ? "#2ecc71" : "#3498db",
+    color: "#fff",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+    transition: "background-color 0.3s ease",
+    zIndex: 1000, // Asegurar que esté por encima de otros elementos
+  }}
+>
+  {darkMode ? "Modo Claro" : "Modo Oscuro"}
+</button> */}
 
       {/* Navegación fija */}
       <nav style={{ position: "fixed", top: 0, width: "100%", backgroundColor: "#1f1f1f", color: "#fff", padding: "10px", zIndex: 999 }}>
@@ -47,7 +52,6 @@ function App() {
         <a href="#habilidades" style={{ margin: "0 15px", color: "#2ecc71", textDecoration: "none" }}>Habilidades</a>
         <a href="#contacto" style={{ margin: "0 15px", color: "#2ecc71", textDecoration: "none" }}>Contacto</a>
         <a href="#footer_" style={{ margin: "0 15px", color: "#2ecc71", textDecoration: "none" }}>Footer</a>
-
       </nav>
 
       {/* Contenido de las secciones */}
@@ -66,7 +70,6 @@ function App() {
       <div id="footer_" data-aos="fade-left">
         <Footer_ />
       </div>
-  
     </div>
   );
 }
