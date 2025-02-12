@@ -1,15 +1,7 @@
-const express = require("express");
-const nodemailer = require("nodemailer");
-const cors = require("cors");
-
-const app = express();
-app.use(cors());
-app.use(express.json()); // Para procesar JSON en las solicitudes
-
-// Endpoint para enviar correos
 app.post("/send-email", async (req, res) => {
   const { nombre, email, mensaje } = req.body;
 
+  // Configuración del transporte de nodemailer
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -34,6 +26,3 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-// Inicia el servidor en producción
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Servidor corriendo en el puerto ${PORT}`));
